@@ -76,7 +76,7 @@ fi
 
 # Build the Rust app
 log "Compiling application..."
-CARGO_HOME="$CACHE_DIR/cargo" cargo build --release
+CARGO_HOME="$CACHE_DIR/cargo" cargo build --release --no-default-features --features with-syntex
 
 log "Caching build artifacts"
 cp -r "$BUILD_DIR/target" "$CACHE_DIR/target"
